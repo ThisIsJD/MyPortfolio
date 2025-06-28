@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(242, 43%, 12%, 75);
+    height: 500vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-navbar {
+    position: fixed;
+    width: 100%;
+}
+
+.custom-navbar a {
+    color: #828FB6;
+    margin-right: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.custom-navbar a:hover {
+    color: #4169E1;
+}
+
+.custom-navbar a:active{
+    color: #F0F4FF !important;
+}
+
+.navbar {
+    transition: all 0.5s ease;
+}
+
+.navbar-scrolled {
+    background-color: hsl(242, 43%, 12%, 75);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+ /* make the gradient cover the whole screen */
+    .cursor-gradient {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      pointer-events: none; /* so it never blocks clicks */
+      background: radial-gradient(
+         circle 200px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(65,105,225,0.8) 0%,
+        transparent 100%
+      );
+      filter: blur(120px);
+      transition: background-position 0.1s ease-out;
+    }
+
+    /* Scroll down indicator */
+.scroll-downs {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  bottom: 0%;
+  left: 0;
+  margin: auto;
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 3px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 4px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(10px); opacity: 0;}
+}
+
+.hero {
+  padding-top: 6rem;
+  min-height: calc(100vh - 6rem);
+  position: relative;
+  overflow: hidden;
+}
+
+
