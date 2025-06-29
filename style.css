@@ -247,6 +247,7 @@ body {
 
 
 
+
 .left-container {
   position: relative; 
   left: 0;
@@ -255,8 +256,12 @@ body {
 
 .right-container {
   position: relative; 
-  left: 50%;
+  left: 0;
   margin-top: 40px;
+}
+
+.right-container .text-box {
+  left: 51%;
 }
 
 .container img {
@@ -349,7 +354,7 @@ body {
   }
 
   .right-container {
-    left: 0;
+    left: -41%;
   }
 
   .left-container img, .right-container img {
@@ -387,7 +392,7 @@ body {
 
   .right-container {
     width: 40%;
-    left: 24.4%;
+    left: 4%;
     margin-top: 20px;
   }
   .left-container img, .right-container img {
@@ -419,7 +424,7 @@ body {
 
   .right-container {
     width: 40%;
-    left: 24.4%;
+    left:  3.4%;
     margin-top: 20px;
   }
   .left-container img, .right-container img {
