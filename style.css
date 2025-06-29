@@ -148,19 +148,57 @@ body {
 /* About section */
 .about-section {
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .left-part {
-
+  position: relative;
 }
+
+.left-part img {
+  width: 300px;
+  height: 300px;
+    box-shadow:
+    0 0 40px rgba(65,105,225,0.6),   /* soft blue halo */
+    0 0 90px rgba(65,105,225,0.4);   /* extended glow */
+}
+
+.left-part a{
+  color: #828fb6;
+}
+
+.left-part a:hover {
+  color: #4169E1;
+}
+
+.right-part p{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.about-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h1 {
+    color: #F0F4FF;
+}
+
+.about-header p {
+    color: #828FB6;
+}
+
 
 .social-links {
   position: absolute;
+  bottom: -14%;         /* or top: X, right: Y, etc. */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
-
-
 
 
 /* timeline section */
@@ -245,9 +283,6 @@ body {
   font-size: 16px;
 }
 
-
-
-
 .left-container {
   position: relative; 
   left: 0;
@@ -264,7 +299,7 @@ body {
   left: 51%;
 }
 
-.container img {
+.tl-container img {
   position: absolute;
   width: 64px;
   border-radius: 50%;
@@ -324,6 +359,31 @@ body {
   border-right: 15.5px solid  rgb(65, 105, 225, 0.25);
   left: -15px;
 }
+
+/* WORK SECTION */
+.work-section {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.content {
+  padding: 60px 0;
+}
+
+.content h1 {
+  color: #4169E1;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.content p {
+  color: #828FB6;
+}
+
+
+
+
+
 
 @media screen and (min-width: 600px) and (max-width: 768px) {
   .timeline{
