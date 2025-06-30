@@ -380,8 +380,174 @@ body {
   color: #828FB6;
 }
 
+/* Certification section */
+.cert-section {
+  margin-top: 120px;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.cert-header {
+  margin-bottom: 120px;
+}
+
+.cert-header h1 {
+    color: #F0F4FF;
+}
+
+.cert-header p {
+    color: #828FB6;
+}
 
 
+.card-wrapper {
+  max-width: 1170px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper .btn-location {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+
+.card-item {
+  gap: 20px;
+  background: rgb(65, 105, 225, 0.20);
+  padding: 20px 20px;
+  border: 1px solid hsla(225, 27%, 61%, 0.25);
+  border-radius: 10px;
+  transition: 0.2s ease;
+
+}
+
+.card-item:hover {
+    box-shadow:
+    0 0 40px hsla(225, 73%, 57%, 0.2),   /* soft blue halo */
+    0 0 90px rgba(65,105,225,0.1);   /* extended glow */
+    border: 1px solid hsla(225, 27%, 61%, 0.75);
+}
+
+.card-link h2{
+  color: #F0F4FF;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.card-link p{
+  padding: 0%;
+  color: #828FB6;
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.card-link pre{
+  color: #F0F4FF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-list .card-item  {
+  list-style: none;
+  max-width: 340px;
+}
+
+
+.card-list .card-item .card-link {
+  width: 300px;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 60px;
+  user-select: none;
+}
+
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
+}
+
+.card-list .card-link .card-image {
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.learnBtn {
+  background: linear-gradient(to right, #532080, #4169E1);
+  background-size: 100% 100%;
+  background-position: left center;
+  color: #F0F4FF;
+  font-size: 20px;
+  border: none;
+  font-weight: 600;
+  transition:  0.3s ease;
+}
+
+.learnBtn:hover {
+  color: #ffffff;
+   background: linear-gradient(to right, hsla(272, 60%, 31%, 0.75), hsla(225, 73%, 57%, 0.75));
+   box-shadow:
+    0 10px 10px hsla(225, 73%, 57%, 0.1); 
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background-color: #4169E1;
+}
+
+.card-wrapper .swiper-pagination-bullet:active {
+  opacity: 1;
+}
+
+/* Technical Skills Section */
+.skill-section {
+  margin-top: 120px;
+}
+
+.skill-header {
+  margin-bottom: 60px;
+}
+
+.skill-header h1 {
+    color: #F0F4FF;
+}
+
+.skill-header p {
+    color: #828FB6;
+}
+
+
+.tech-column h2, p {
+  color: #F0F4FF;
+}
+
+.tech-stack {
+  margin-bottom: 10px;
+}
+
+.language-icon{
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+/* Projects section */
+.project-section {
+  margin-top: 120px;
+}
 
 
 
