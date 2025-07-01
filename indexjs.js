@@ -105,3 +105,29 @@ new Swiper('.swiper', {
     },
   }
   });
+
+
+  // JS: select all the cards, then attach listeners to each
+const cards = document.querySelectorAll('.card-layer');
+
+cards.forEach(card => {
+  card.addEventListener('mousemove', onCardMouseMove);
+  card.addEventListener('mouseleave', onCardMouseLeave);
+});
+
+function onCardMouseMove(e) {
+  const card = e.currentTarget;               // the card under the pointer
+  const box = card.getBoundingClientRect();
+  const relX = e.clientX - box.left;
+  const relY = e.clientY - box.top;
+
+  const rotateY = -(relX - box.width  / 2) / 15;
+  const rotateX =  (relY - box.height / 2) / 15;
+
+  card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+}
+
+function onCardMouseLeave(e) {
+  const card = e.currentTarget;
+  card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+}

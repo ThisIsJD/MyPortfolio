@@ -400,7 +400,6 @@ body {
     color: #828FB6;
 }
 
-
 .card-wrapper {
   max-width: 1170px;
   margin: 0 60px 35px;
@@ -426,6 +425,8 @@ body {
   border: 1px solid hsla(225, 27%, 61%, 0.25);
   border-radius: 10px;
   transition: 0.2s ease;
+  list-style: none;
+  max-width: 340px;
 
 }
 
@@ -457,10 +458,7 @@ body {
   font-weight: 500;
 }
 
-.card-list .card-item  {
-  list-style: none;
-  max-width: 340px;
-}
+
 
 
 .card-list .card-item .card-link {
@@ -548,6 +546,102 @@ body {
 .project-section {
   margin-top: 120px;
 }
+
+.project-card{
+  background: rgb(65, 105, 225, 0.25);
+  border-radius: 10px;
+}
+
+.project-card:hover{
+    border: 1px solid hsla(225, 27%, 61%, 0.75);
+}
+
+#card-container {
+  perspective: 1000px;
+}
+
+.project-card img{
+  padding: 16px 16px 0px 16px;
+}
+
+#card-layer {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+}
+
+.card-row {
+  margin: 20px 0px;;
+}
+
+.card-body h5{
+  color: #F0F4FF;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-body h6 {
+  color: #828FB6;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-body span {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #828FB6;
+  background: rgb(65, 105, 225, 0.25);
+  border: 1px solid rgb(65, 105, 225, 0.75);
+}
+
+.card-body p {
+  color: #828FB6;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.buttons a{
+  color: #828FB6;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.buttons i{
+  margin-left: 4px;
+}
+
+
+.buttons a:hover {
+  background-color: #4169E1;
+  color: #F0F4FF;
+}
+
+/* Contact Section */
+
+.contact-section {
+  margin-top: 120px;;
+}
+
+.social-card {
+  padding-top: 20px;
+  background: rgb(65, 105, 225, 0.25);
+  margin-bottom: 20px;
+}
+
+.social-card:hover {
+  border: 1px solid hsla(225, 27%, 61%, 0.75);
+}
+
+.social-card .email {
+  font-size: 40px;
+  color: #828FB6;
+}
+
+
+
+
+
+
 
 
 
