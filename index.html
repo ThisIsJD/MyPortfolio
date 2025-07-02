@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://kit.fontawesome.com/820ab1d0b7.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body   
+  data-bs-spy="scroll"
+  data-bs-target="#navbarNavAltMarkup"
+  data-bs-offset="80"
+  tabindex="0">
   <!-- header navbar -->
   <header>
     <nav class="navbar navbar-expand-lg custom-navbar" id="navbar">
@@ -22,13 +26,13 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" aria-current="page" href="#">About</a>
-          <a class="nav-link" href="#">Education</a>
-          <a class="nav-link" href="#">Work</a>
-          <a class="nav-link" href="#">Certifications</a>
-          <a class="nav-link" href="#">Skills</a>
-          <a class="nav-link" href="#">Projects</a>
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#experience">Work</a>
+          <a class="nav-link" href="#certifications">Certifications</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </div>
       </div>
     </div>
@@ -61,7 +65,7 @@
     </section>
 
     <!-- About section -->
-    <section class="about-section">
+    <section class="about-section" id="about">
 
       <div class="container">
         <div class=" row about-header text-center">
@@ -108,7 +112,7 @@
     </section>
 
     <!-- Timeline Section -->
-    <section class="timeline-section">
+    <section class="timeline-section" id="education">
       <div class="timeline-header text-center">
         <p class="fs-5 fw-semibold mb-1">WHAT I HAVE STUDIED SO FAR</p>
         <h1 class="display-4 fw-bolder mb-2">EDUCATION</h1>
@@ -155,7 +159,7 @@
     </section>
 
     <!-- Work Experience Section -->
-    <section class="work-section">
+    <section class="work-section" id="experience">
 
       <div class="container">
         <div class=" row about-header text-center">
@@ -175,7 +179,7 @@
     </section>
 
     <!-- Certification Section -->
-    <section class="cert-section">
+    <section class="cert-section" id="certifications">
 
         <div class="cert-header text-center">
           <p class="fs-5 fw-semibold mb-1">CONTINUOUS LEARNING</p>
@@ -254,7 +258,7 @@
       
     </section>
 
-      <section class="skill-section">
+      <section class="skill-section" id="skills">
       <div class="container">
         <div class="row">
           <div class="skill-header text-center">
@@ -323,7 +327,7 @@
       </div>
     </section>
 
-    <section class="project-section">
+    <section class="project-section" id="projects">
       <div class="container">
         <div class="row">
           <div class="skill-header text-center">
@@ -425,7 +429,7 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="container">
         <div class="row">
           <div class="skill-header text-center">
@@ -435,7 +439,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6 left-part d-flex flex-column align-items-center justify-content-center">
+          <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center">
             <div class="card social-card text-center " style="width: 70%;">
               <i class="fa-solid fa-envelope email"></i>
               <div class="card-body">
@@ -461,9 +465,34 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-6 form-column d-flex flex-column align-items-center justify-content-center">
+            <h5>Write me your Message!</h5>
+            <div class="mb-3" style="width: 70%;">
+              <label for="Name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="Name" placeholder="Your Name">
+            </div>
+            <div class="mb-3" style="width: 70%;">
+              <label for="Email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="Email" placeholder="Your Name">
+            </div>
+            <div class="mb-4" style="width: 70%;">
+              <label for="Message" class="form-label">Message</label>
+              <textarea class="form-control" id="Message" rows="8" placeholder="Hey John Daniel, love the website!  I’d like to chat about some opportunities you might like! 🎉
+              "></textarea>
+            </div>
+                  <a href="#" class="card-link btn contact-buttons ">Send Message <i class="fa-solid fa-paper-plane fa-lg"></i></a>
+          </div>
         </div>
       </div>
     </section>
+    <section class="footer-section">
+      <div class="container text-center">
+        <p class="mb-0">Designed & Built by John Daniel Labing</p>  
+        <p class="mb-0">Made with ❤️ and ☕</p>
+
+      </div>
+    </section>
+
     
   </main>
 

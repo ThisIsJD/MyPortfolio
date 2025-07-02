@@ -24,6 +24,52 @@ window.addEventListener('scroll', () => {
   lastY = currentY;
 });
 
+document.querySelectorAll('.custom-navbar .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    // remove active from all
+    document.querySelectorAll('.custom-navbar .nav-link.active')
+      .forEach(el => el.classList.remove('active'));
+
+    // add to the one just clicked
+    link.classList.add('active');
+  });
+});
+
+// 1) Grab all the nav‐links and their target sections
+const navLinks = document.querySelectorAll('.custom-navbar .nav-link');
+const sections = Array.from(navLinks).map(link => {
+  const id = link.getAttribute('href').slice(1);  // “#about” → “about”
+  return document.getElementById(id);
+});
+
+// 2) On scroll, find the section whose top is just above the fold
+function onScroll() {
+  const scrollPos = window.pageYOffset + window.innerHeight / 3;
+
+  let currentSection = sections[0];
+  for (let sec of sections) {
+    if (sec.offsetTop <= scrollPos) {
+      currentSection = sec;
+    } else {
+      break;
+    }
+  }
+
+  // 3) Toggle active class
+  navLinks.forEach(link => {
+    link.classList.toggle(
+      'active',
+      link.getAttribute('href').slice(1) === currentSection.id
+    );
+  });
+}
+
+// 4) Wire it up
+window.addEventListener('scroll', onScroll);
+window.addEventListener('load', onScroll);  // ensure correct on page‐load
+
+
+
 //cursor follower
      const grad = document.querySelector('.cursor-gradient');
     document.addEventListener('mousemove', e => {

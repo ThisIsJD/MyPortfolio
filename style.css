@@ -4,6 +4,7 @@ body {
     background-color: hsl(242, 43%, 12%, 75);
     height: 500vh;
     font-family: Montserrat, 'Playfair Display', sans-serif;
+    
 }
 
 @font-face {
@@ -36,12 +37,12 @@ body {
 }
 
 
-.custom-navbar a:hover {
+.custom-navbar .nav-link:hover {
     color: #4169E1;
 }
 
-.custom-navbar a:active{
-    color: #F0F4FF !important;
+ .custom-navbar .nav-link.active{
+    color: #4169E1 !important;
 }
 
 .navbar {
@@ -624,7 +625,7 @@ body {
 
 .social-card {
   padding-top: 20px;
-  background: rgb(65, 105, 225, 0.25);
+  background: #4169e140;
   margin-bottom: 20px;
 }
 
@@ -637,6 +638,68 @@ body {
   color: #828FB6;
 }
 
+.social-card a{
+ color: #828FB6;
+}
+
+.form-column label{
+  color: #F0F4FF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-column h5 {
+  color: #F0F4FF;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.form-control {
+  background: transparent ;
+  border: 1px solid rgb(65, 105, 225, 0.75);
+  padding: 16px 16px;
+  font-size: 16px;
+  color: #828FB6;
+  font-weight: 500;
+}
+
+.form-control:focus {
+  border-color: #4169E1;
+  box-shadow: 0 0 0 2px rgba(65, 105, 225, 0.25);
+  background: transparent;
+    color: #F0F4FF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact-buttons {
+  width: 70%;
+  background: linear-gradient(to right, #532080, #4169E1);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-position 0.3s ease-in-out;
+  color: #F0F4FF;
+  border: none;
+}
+
+.contact-buttons:hover {
+  background-position: right center;
+  color: #F0F4FF;
+  background: linear-gradient(to right, hsl(272, 48%, 34%), hsl(225, 76%, 63%));
+}
+
+.footer-section {
+  margin-top: 68px;
+  padding-bottom: 20px;
+}
+
+.footer-section p {
+  color: #828FB6;
+  font-size: 14px;
+  font-weight: 500;
+}
 
 
 
