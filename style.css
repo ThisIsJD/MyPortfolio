@@ -192,13 +192,10 @@ body {
 }
 
 
-.social-links {
-  position: absolute;
-  bottom: -14%;         /* or top: X, right: Y, etc. */
-  left: 50%;
-  transform: translateX(-50%);
+.social-links {        /* or top: X, right: Y, etc. */
   display: flex;
   gap: 40px;
+  margin-bottom: 20px;
 }
 
 
@@ -286,7 +283,7 @@ body {
 
 .left-container {
   position: relative; 
-  left: 0;
+  left: 0.1%;
   margin-top: 40px;
 }
 
@@ -708,7 +705,7 @@ body {
 
 
 
-@media screen and (min-width: 600px) and (max-width: 768px) {
+@media (max-width: 599px) {
   .timeline{
     margin: 50px auto;
   }
@@ -718,26 +715,26 @@ body {
   }
 
   .timeline .container {
-    width: 100%;
+    width: 50%;
     padding-left: 80px;
     padding-right: 25px;
   }
 
   .text-box {
     font-size: 13px;
-    width: 100%;
+    width: 80%;
     margin: 20px 0;
     padding: 20px 15px;
   }
 
   .left-container, .right-container {
-    width: 100%;
-    left: 0;
+    width: 80%;
+    left: 24.5%;
     margin-top: 20px;
   }
 
   .right-container {
-    left: -41%;
+    left: -16.5%;
   }
 
   .left-container img, .right-container img {
@@ -753,9 +750,9 @@ body {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 600px) {
   .timeline .container {
-    width: 50%;
+    width: 100%;
     padding-left: 80px;
     padding-right: 25px;
   }
@@ -769,13 +766,13 @@ body {
 
   .left-container {
     width: 40%;
-    left: -30.4%;
+    left: 2.2%;
     margin-top: 20px;
   }
 
   .right-container {
     width: 40%;
-    left: 4%;
+    left: 36.8%;
     margin-top: 20px;
   }
   .left-container img, .right-container img {
@@ -801,13 +798,13 @@ body {
 
   .left-container {
     width: 40%;
-    left: -29.7%;
+    left: 3.3%;
     margin-top: 20px;
   }
 
   .right-container {
     width: 40%;
-    left:  3.4%;
+    left:  35.7%;
     margin-top: 20px;
   }
   .left-container img, .right-container img {
