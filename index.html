@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://kit.fontawesome.com/820ab1d0b7.js" crossorigin="anonymous"></script>
 </head>
-<body   
+<body 
   data-bs-spy="scroll"
   data-bs-target="#navbarNavAltMarkup"
   data-bs-offset="80"
@@ -33,6 +33,10 @@
           <a class="nav-link" href="#skills">Skills</a>
           <a class="nav-link" href="#projects">Projects</a>
           <a class="nav-link" href="#contact">Contact</a>
+          <button id="theme-switch" class="btn theme-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM80-440q-17 0-28.5-11.5T40-480q0-17 11.5-28.5T80-520h80q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440H80Zm720 0q-17 0-28.5-11.5T760-480q0-17 11.5-28.5T800-520h80q17 0 28.5 11.5T920-480q0 17-11.5 28.5T880-440h-80ZM480-760q-17 0-28.5-11.5T440-800v-80q0-17 11.5-28.5T480-920q17 0 28.5 11.5T520-880v80q0 17-11.5 28.5T480-760Zm0 720q-17 0-28.5-11.5T440-80v-80q0-17 11.5-28.5T480-200q17 0 28.5 11.5T520-160v80q0 17-11.5 28.5T480-40ZM226-678l-43-42q-12-11-11.5-28t11.5-29q12-12 29-12t28 12l42 43q11 12 11 28t-11 28q-11 12-27.5 11.5T226-678Zm494 495-42-43q-11-12-11-28.5t11-27.5q11-12 27.5-11.5T734-282l43 42q12 11 11.5 28T777-183q-12 12-29 12t-28-12Zm-42-495q-12-11-11.5-27.5T678-734l42-43q11-12 28-11.5t29 11.5q12 12 12 29t-12 28l-43 42q-12 11-28 11t-28-11ZM183-183q-12-12-12-29t12-28l43-42q12-11 28.5-11t27.5 11q12 11 11.5 27.5T282-226l-42 43q-11 12-28 11.5T183-183Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="M480-120q-151 0-255.5-104.5T120-480q0-138 90-239.5T440-838q13-2 23 3.5t16 14.5q6 9 6.5 21t-7.5 23q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q11-7 22.5-6.5T819-479q10 5 15.5 15t3.5 24q-14 138-117.5 229T480-120Z"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -465,20 +469,33 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 form-column d-flex flex-column align-items-center justify-content-center">
             <h5>Write me your Message!</h5>
-            <div class="mb-3" style="width: 70%;">
-              <label for="Name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="Name" placeholder="Your Name">
-            </div>
-            <div class="mb-3" style="width: 70%;">
-              <label for="Email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="Email" placeholder="Your Name">
-            </div>
-            <div class="mb-4" style="width: 70%;">
-              <label for="Message" class="form-label">Message</label>
-              <textarea class="form-control" id="Message" rows="8" placeholder="Hey John Daniel, love the website!  I’d like to chat about some opportunities you might like! 🎉
-              "></textarea>
-            </div>
-                  <a href="#" class="card-link btn contact-buttons ">Send Message <i class="fa-solid fa-paper-plane fa-lg"></i></a>
+
+            <!-- Success Notification -->
+                <div id="formAlert" class="alert alert-success mt-3" role="alert" style="display: none;">
+                    🎉 This is just a demo—your message won't actually be sent!
+                </div>
+
+            <!-- form starts here -->
+            <form id="contactForm" class="needs-validation" novalidate style="width: 70%;">
+              <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="Name" placeholder="Your Name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="Email" placeholder="you@example.com" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="mb-4">
+                <label for="Message" class="form-label">Message</label>
+                <textarea class="form-control" id="Message" rows="6" placeholder="Hey John Daniel, love the website!  I’d like to chat about some opportunities you might like! 🎉" required></textarea>
+                <div class="invalid-feedback">Please write a message.</div>
+              </div>
+              <button type="submit" class="btn btn-primary contact-buttons" style="width: 100%;">
+                Send Message <i class="fa-solid fa-paper-plane fa-lg ms-2"></i>
+              </button>
+            </form>
           </div>
         </div>
       </div>

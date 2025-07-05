@@ -177,3 +177,44 @@ function onCardMouseLeave(e) {
   const card = e.currentTarget;
   card.style.transform = 'rotateX(0deg) rotateY(0deg)';
 }
+
+let lightMode = localStorage.getItem('lightmode')
+const themeSwitch = document.getElementById('theme-switch')
+
+const enableLightMode = () => {
+  document.body.classList.add('lightmode')
+  localStorage.setItem('lightmode', 'active')
+}
+
+const disableLightMode = () => {
+  document.body.classList.remove('lightmode')
+  localStorage.setItem('lightmode', 'null')
+}
+
+if(lightMode === "active") enableLightMode()
+
+themeSwitch.addEventListener("click", () => {
+  lightMode = localStorage.getItem('lightmode')
+  lightMode !== "active" ? enableLightMode() : disableLightMode()
+})
+
+    const form = document.getElementById('contactForm');
+    const alertContainer = document.getElementById('formAlert');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (form.checkValidity()) {
+         alertContainer.style.display = "block";
+         
+         setTimeout(function () {
+          alertContainer.style.display = "none";
+          }, 5000); 
+
+        form.classList.remove('was-validated');
+        form.reset();
+      } else {
+        form.classList.add('was-validated');
+      }
+    }, false);
