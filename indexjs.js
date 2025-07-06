@@ -152,6 +152,43 @@ new Swiper('.swiper', {
   }
   });
 
+  //Timeline animation
+
+  const timelineEl = document.querySelector('.timeline');
+const tlContainers = document.querySelectorAll('.tl-container');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // 1) grow the center line
+      timelineEl.classList.add('animate-line');
+
+      // 2) stagger each container
+      tlContainers.forEach(container => observer.observe(container));
+
+      // stop observing the timeline itself
+      observer.unobserve(timelineEl);
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+// Start by watching the timeline as a whole
+observer.observe(timelineEl);
+
+// Then also handle each tl-container for their individual .animate class
+const itemObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      itemObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+tlContainers.forEach(container => itemObserver.observe(container));
+
 
   // JS: select all the cards, then attach listeners to each
 const cards = document.querySelectorAll('.card-layer');
@@ -217,4 +254,5 @@ themeSwitch.addEventListener("click", () => {
       } else {
         form.classList.add('was-validated');
       }
-    }, false);
+    }, false);    
+
